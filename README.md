@@ -4,6 +4,8 @@ For an editor without technical knowledge it ca be a challenge to compare (pendi
 
 That is why we have developed the content app Changes. Changes delivers a good user experience when it comes to reviewing pending changes.
 
+![Change Content App](https://github.com/NovawareNL/Changes/blob/master/changescontentapp.PNG)
+
 **Current release of Changes comes with:**
 
  - Insight into saved content changes that are not published yet,
