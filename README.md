@@ -20,4 +20,5 @@ That is why we have developed the content app Changes. Changes delivers a good u
  - You can browse through content versions + associated changes.
 
 **How to install:**
-Simply copy the App_Plugins and ContentApps folder to your Umbraco 8 Umbraco.Web.Ui project and have fun!
+
+Simply copy the App_Plugins and ContentApps folder to your Umbraco 8 Umbraco.Web.UI project and have fun!
