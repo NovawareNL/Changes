@@ -1,0 +1,15 @@
+﻿{
+    "contentApps": [
+        {
+            "name": "Changes",
+            "alias": "changes",
+            "weight": 0,
+            "icon": "icon-edit",
+            "view": "~/App_Plugins/Changes/app.html"
+        }
+    ],
+    "javascript": [
+        "~/App_Plugins/Changes/changesService.js",
+        "~/App_Plugins/Changes/changesController.js"
+    ]
+}
