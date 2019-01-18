@@ -11,5 +11,8 @@
     "javascript": [
         "~/App_Plugins/Changes/changesService.js",
         "~/App_Plugins/Changes/changesController.js"
+    ],
+    "css": [
+        "~/App_Plugins/Changes/changes.css"
     ]
 }

@@ -13,8 +13,8 @@ namespace Umbraco.Web.UI.ContentApps.Changes.Converters
     public static class Converters
     {
         /// <summary>
-        /// Todo: It should be nice to make it possible for developers to add own converters and/or custom 
-        /// Todo: views for viewing property values on the pending changes dashboard.
+        /// Todo: It should be nice to make it possible for developers to add custom converters and/or 
+        /// Todo: views for displaying property values on the pending changes dashboard.
         /// </summary>
         /// <param name="value">The RAW value of the IContent property</param>
         /// <param name="editorAlias">The property editor alias of the Content Type property</param>
@@ -32,13 +32,12 @@ namespace Umbraco.Web.UI.ContentApps.Changes.Converters
                 default: return value;  
             }
         }
-
-        // Convert UDIs to list of {Name, Icon, EditingLink} objects
+        
         private static List<MultipleTreeNodePickerConverted> ConvertMultiNodeTreePicker(object value)
         {
             var returnList = new List<MultipleTreeNodePickerConverted>();
 
-            if (!string.IsNullOrEmpty(value.ToString()))
+            if (value != null && !string.IsNullOrEmpty(value.ToString()))
             {
                 var udis = value.ToString().Split(',');
 
@@ -63,7 +62,7 @@ namespace Umbraco.Web.UI.ContentApps.Changes.Converters
         
         private static object ConvertNestedContent(object value)
         {
-            if (!string.IsNullOrEmpty(value.ToString()))
+            if (value != null)
             {
                 try
                 {
@@ -77,11 +76,10 @@ namespace Umbraco.Web.UI.ContentApps.Changes.Converters
 
             return null;
         }
-
-        // Convert Udi to Uri
+        
         private static object ConvertMediaPicker(object value)
         {
-            if (!string.IsNullOrEmpty(value.ToString()))
+            if (value != null)
             {
                 var udi = Udi.Parse(value.ToString());
                 var media = Current.Services.MediaService.GetById(((GuidUdi)udi).Guid);
