@@ -1,5 +1,6 @@
 ﻿using Umbraco.Core;
 using Umbraco.Core.Composing;
+using Umbraco.Web;
 using Umbraco.Web.UI.ContentApps.Changes;
 
 namespace Umbraco.Web.UI.ContentApps.Changes
@@ -9,6 +10,8 @@ namespace Umbraco.Web.UI.ContentApps.Changes
         public void Compose(Composition composition)
         {
             composition.Register<IEditingHelper, EditingHelper>();
+			
+			composition.ContentApps().Append<ChangesContentApp>();
         }
     }
 }
